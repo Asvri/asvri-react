@@ -1,0 +1,46 @@
+{
+  "name": "@asvri/react",
+  "version": "1.0.0",
+  "description": "ASVRI Checkout for React and Next.js: a checkout button and hook, plus route handlers that create sessions and verify webhooks on your server.",
+  "keywords": ["asvri", "react", "nextjs", "payments", "checkout", "webhooks"],
+  "homepage": "https://www.asvri.com/developers",
+  "repository": { "type": "git", "url": "git+https://github.com/asvri/asvri-react.git" },
+  "bugs": { "url": "https://github.com/asvri/asvri-react/issues" },
+  "license": "MIT",
+  "author": "ASVRI",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": { "types": "./dist/esm/index.d.ts", "default": "./dist/esm/index.js" },
+      "require": { "types": "./dist/cjs/index.d.ts", "default": "./dist/cjs/index.js" }
+    },
+    "./server": {
+      "import": { "types": "./dist/esm/server.d.ts", "default": "./dist/esm/server.js" },
+      "require": { "types": "./dist/cjs/server.d.ts", "default": "./dist/cjs/server.js" }
+    },
+    "./package.json": "./package.json"
+  },
+  "typesVersions": { "*": { "server": ["./dist/esm/server.d.ts"] } },
+  "files": ["dist", "README.md", "LICENSE"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "asvri": "github:asvri/asvri-node#v1.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.0",
+    "@types/react": "^19.2.0",
+    "react": "^19.2.0",
+    "typescript": "~5.9.3"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "asvri-next-example",
+  "private": true,
+  "scripts": { "dev": "next dev", "build": "next build", "start": "next start" },
+  "dependencies": {
+    "@asvri/react": "github:asvri/asvri-react#v1.0.0",
+    "next": "^16.2.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": { "typescript": "~5.9.3", "@types/react": "^19.2.0", "@types/node": "^20.19.0" }
+}

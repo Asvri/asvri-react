@@ -74,7 +74,7 @@ export interface AsvriCheckoutButtonProps extends Omit<ButtonHTMLAttributes<HTML
 /**
  * A button that starts ASVRI Checkout. Unstyled: pass className (it gets data-loading while busy).
  *
- *   <AsvriCheckoutButton endpoint="/api/checkout" body={{ orderId: "1042" }} className="btn">Pay ₦2,500</AsvriCheckoutButton>
+ *   <AsvriCheckoutButton endpoint="/api/checkout" body={{ orderId: "1042" }} className="btn">Pay $25</AsvriCheckoutButton>
  */
 export function AsvriCheckoutButton({ endpoint, init, onRedirect, onError, body, children = "Pay now", loadingText = "Redirecting to payment…", showError = true, disabled, type = "button", ...rest }: AsvriCheckoutButtonProps) {
   const { start, loading, error } = useAsvriCheckout({ endpoint, init, onRedirect, onError })

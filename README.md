@@ -22,7 +22,7 @@ ASVRI_WEBHOOK_SECRET=whsec_...     # from registering your webhook endpoint (bel
 import { AsvriCheckoutButton } from "@asvri/react"
 
 <AsvriCheckoutButton endpoint="/api/checkout" body={{ orderId: order.id }} className="btn btn-primary">
-  Pay ₦2,500
+  Pay $25
 </AsvriCheckoutButton>
 ```
 
@@ -48,7 +48,7 @@ export const POST = createCheckoutRoute<{ orderId: string }>(async ({ orderId })
   if (!order) throw new Error("No such order.")      // shown under the button
   return {
     amount: order.total,
-    currency: "NGN",
+    currency: "USD",
     reference: order.id,
     customer: { name: order.name, email: order.email },
     success_url: `${process.env.BASE_URL}/thanks`,   // ASVRI adds ?session_id=cs_…

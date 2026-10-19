@@ -4,7 +4,7 @@
 //   // app/api/checkout/route.ts
 //   export const POST = createCheckoutRoute(async (body) => {
 //     const order = await getOrder(body.orderId)                    // work the price out here, not in the browser
-//     return { amount: order.total, currency: "NGN", reference: order.id, success_url: `${BASE}/thanks`, idempotencyKey: `order-${order.id}` }
+//     return { amount: order.total, currency: "USD", reference: order.id, success_url: `${BASE}/thanks`, idempotencyKey: `order-${order.id}` }
 //   })
 //
 //   // app/api/asvri-webhook/route.ts
